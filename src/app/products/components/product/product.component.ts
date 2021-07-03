@@ -6,10 +6,9 @@ import {
     EventEmitter, 
     OnChanges, 
     SimpleChanges, 
-    OnInit, 
-    DoCheck, 
+    OnInit,
     OnDestroy} from "@angular/core";
-import { Product } from "../product.model";
+import { Product } from "../../../product.model";
 
 @Component({
     selector: 'app-product',
@@ -18,7 +17,7 @@ import { Product } from "../product.model";
 })
 
 
-export class ProductComponent implements OnChanges, OnInit, DoCheck, OnDestroy{
+export class ProductComponent implements OnChanges, OnInit, OnDestroy{
 
     @Input() product: Product
     @Output() productClicked: EventEmitter<any> = new EventEmitter()
@@ -43,9 +42,9 @@ export class ProductComponent implements OnChanges, OnInit, DoCheck, OnDestroy{
         console.log('3.NgOnInit')
     }
 
-    ngDoCheck(){
-        console.log('4.NgDoCheck')
-    }
+    // ngDoCheck(){
+    //     console.log('4.NgDoCheck')
+    // }
 
     ngOnDestroy(){
         console.log('5.NgOnDestroy')
