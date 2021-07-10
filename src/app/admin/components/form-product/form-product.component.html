@@ -1,0 +1,53 @@
+<form [formGroup]="form" class="form-product" (ngSubmit)="createProduct($event)">
+    <mat-card class="form-product__container">
+        <mat-card-header>
+            <mat-card-title>Producto</mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="w-100">
+            <div class="row">
+                <div class="col-xs w-100">
+                    <mat-form-field class="w-100">
+                        <input matInput placeholder="id" formControlName="id" type="text">
+                    </mat-form-field>
+                    <div *ngIf="form.get('id').errors && form.get('id').dirty">
+                        <small *ngIf="form.get('id').hasError('required')">El campo es obligatorio</small>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs w-100">
+                    <mat-form-field class="w-100">
+                        <input matInput placeholder="Title" formControlName="title" type="text">
+                    </mat-form-field>
+                    <div *ngIf="form.get('title').errors && form.get('title').dirty">
+                        <small *ngIf="form.get('title').hasError('required')">El campo es obligatorio</small>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs w-100">
+                    <mat-form-field class="w-100">
+                        <input matInput placeholder="Price" formControlName="price" type="number">
+                    </mat-form-field>
+                    <div *ngIf="form.get('price').errors && form.get('price').dirty">
+                        <small *ngIf="form.get('price').hasError('price_invalid')">El número no puede > 10000</small>
+                        <small *ngIf="form.get('price').hasError('required')">El campo es obligatorio</small>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs w-100">
+                    <mat-form-field class="w-100">
+                        <textarea matInput placeholder="Description" formControlName="description"></textarea>
+                    </mat-form-field>
+                    <div *ngIf="form.get('description').errors && form.get('description').dirty">
+                        <small *ngIf="form.get('description').hasError('required')">El campo es obligatorio</small>
+                    </div>
+                </div>
+            </div>
+        </mat-card-content>
+        <mat-card-actions class="w-100">
+            <button mat-raised-button type="submit" [disabled]="form.invalid">Create Product</button>
+        </mat-card-actions>
+    </mat-card>
+</form>
