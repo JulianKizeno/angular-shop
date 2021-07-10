@@ -1,14 +1,14 @@
-//decoradores
-import { 
-    Component, 
-    Input, 
-    Output, 
-    EventEmitter, 
-    OnChanges, 
-    SimpleChanges, 
+// decoradores
+import {
+    Component,
+    Input,
+    Output,
+    EventEmitter,
+    OnChanges,
+    SimpleChanges,
     OnInit,
-    OnDestroy} from "@angular/core";
-import { Product } from "../../../product.model";
+    OnDestroy} from '@angular/core';
+import { Product } from '../../../product.model';
 
 @Component({
     selector: 'app-product',
@@ -19,27 +19,27 @@ import { Product } from "../../../product.model";
 
 export class ProductComponent implements OnChanges, OnInit, OnDestroy{
 
-    @Input() product: Product
-    @Output() productClicked: EventEmitter<any> = new EventEmitter()
+    @Input() product: Product;
+    @Output() productClicked: EventEmitter<any> = new EventEmitter();
 
-    today = new Date()
+    today = new Date();
 
     constructor(){
-        console.log('1.Constructor')
+        console.log('1.Constructor');
     }
 
     addToCart(){
-        console.log('Producto Añadido')
-        this.productClicked.emit(this.product.id)
+        console.log('Producto Añadido');
+        this.productClicked.emit(this.product.id);
     }
 
     ngOnChanges(changes: SimpleChanges){
-        console.log('2.NgOnChanges')
-        console.log(changes)
+        console.log('2.NgOnChanges');
+        console.log(changes);
     }
 
     ngOnInit(){
-        console.log('3.NgOnInit')
+        console.log('3.NgOnInit');
     }
 
     // ngDoCheck(){
@@ -47,7 +47,7 @@ export class ProductComponent implements OnChanges, OnInit, OnDestroy{
     // }
 
     ngOnDestroy(){
-        console.log('5.NgOnDestroy')
+        console.log('5.NgOnDestroy');
     }
- 
+
 }

@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DemoComponent implements OnInit {
 
-  title = 'angular-store';
+  title = 'angular-store'
 
   items = ['Julian', 'John', 'Zaira', 'Caro']
 

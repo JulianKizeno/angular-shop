@@ -1,17 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes, PreloadAllModules } from '@angular/router';
 
-import { DemoComponent } from "./demo/demo.component";
-import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
-import { LayoutComponent } from "./layout/layout.component";
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { LayoutComponent } from './layout/layout.component';
 
-import { AdminGuard } from "./admin.guard";
+import { AdminGuard } from './admin.guard';
 
 const routes: Routes = [
   {
     path: '',
     component: LayoutComponent,
-    
     children: [
       {
         path: '',
@@ -34,12 +32,21 @@ const routes: Routes = [
         path: 'contact',
         canActivate: [AdminGuard],
         loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule)
-      }
+      },
+      {
+        path: 'about',
+        canActivate: [AdminGuard],
+        loadChildren: () => import('./about/about.module').then(m => m.AboutModule)
+      },
+      {
+        path: 'demo',
+        loadChildren: () => import('./demo/demo.module').then(m => m.DemoModule)
+      },
     ]
   },
   {
-    path: 'demo',
-    component: DemoComponent
+    path: 'admin',
+    loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)
   },
   {
     path: '**',

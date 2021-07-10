@@ -15,11 +15,9 @@ const routes: Routes = [
     imports: [
         RouterModule.forChild(routes)
     ],
-    exports: [ 
+    exports: [
         RouterModule
     ]
 })
 
-export class ProductsRoutingModule {
-
-}
+export class ProductsRoutingModule {}

@@ -1,10 +1,30 @@
-:host{
-    margin: 2px;
-    border-radius: 5px;
-    border: 1px solid black;
-    display: block;
-}
+// :host{
+//     margin: 2px;
+//     border-radius: 5px;
+//     border: 1px solid black;
+//     display: block;
+// }
 
 img{
     max-width: 100%;
 }
+
+.mat-card-actions .mat-raised-button, .mat-card-actions .mat-stroked-button{
+    margin: 0 0 10px 0;
+}
+
+a, button{
+    width: 100%;
+}
+
+.crop-image {
+    display: block;
+    height: 250px;
+    width: 100%;
+    img {
+      object-fit: contain;
+      height: 100%;
+      width: 100%;
+      object-position: center;
+    }
+  }

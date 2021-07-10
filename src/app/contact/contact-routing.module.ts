@@ -20,6 +20,4 @@ const routes: Routes = [
     ]
 })
 
-export class ContactRoutingModule {
-
-}
+export class ContactRoutingModule {}
