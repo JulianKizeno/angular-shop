@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/platzi-store",
+    "public": "dist/angular-store",
     "ignore": [
       "firebase.json",
       "**/.*",
