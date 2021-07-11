@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Product } from '../../../product.model';
+import { Product } from '../../../core/models/product.model';
 import { ActivatedRoute, Params } from '@angular/router';
 import { ProductsService } from '../../../core/service/products/products.service';
 
@@ -54,7 +54,7 @@ export class ProductDetailComponent implements OnInit {
       description: 'Goku super sayayin ataque'
     }
     this.productsService.updateProduct('2323', updateProduct)
-      .subscribe(product =>{
+      .subscribe(product => {
         console.log(product)
       })
   }
