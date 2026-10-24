@@ -3,11 +3,12 @@ import { FormBuilder, FormGroup, Validators  } from '@angular/forms'
 import { Router  } from '@angular/router'
 import { ProductsService } from '../../../core/service/products/products.service'
 import { MyValidators } from '../../../utils/validators'
-import { AngularFireStorage } from '@angular/fire/storage'
+import { AngularFireStorage } from '@angular/fire/compat/storage'
 import { finalize } from 'rxjs/operators'
 import { Observable } from 'rxjs';
 
 @Component({
+  standalone: false,
   selector: 'app-form-product',
   templateUrl: './form-product.component.html',
   styleUrls: ['./form-product.component.scss']

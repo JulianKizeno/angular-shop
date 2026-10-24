@@ -5,6 +5,7 @@ import { ProductsService } from '../../../core/service/products/products.service
 import { MyValidators } from '../../../utils/validators'
 
 @Component({
+  standalone: false,
   selector: 'app-product-edit',
   templateUrl: './product-edit.component.html',
   styleUrls: ['./product-edit.component.scss']

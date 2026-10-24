@@ -1,3 +1,4 @@
+import { ExponentialPipe } from '../../../shared/pipes/exponential/exponential.pipe';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DemoComponent } from './demo.component';
@@ -8,7 +9,7 @@ describe('DemoComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DemoComponent ]
+      declarations: [ DemoComponent, ExponentialPipe ]
     })
     .compileComponents();
   });
