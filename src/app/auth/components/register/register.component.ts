@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { AuthService } from '../../../core/service/auth.service';
 
 @Component({
+  standalone: false,
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss']

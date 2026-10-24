@@ -3,6 +3,7 @@ import { Product } from '../../../core/models/product.model';
 import { ProductsService } from '../../../core/service/products/products.service'
 
 @Component({
+  standalone: false,
   selector: 'app-products',
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.scss']
